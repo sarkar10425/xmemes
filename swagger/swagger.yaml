@@ -1,0 +1,142 @@
+---
+swagger: "2.0"
+info:
+  description: "XMemes API for create, read, update and delete memes"
+  version: "1.0.0"
+  title: "XMemes API - Arindam"
+  termsOfService: "http://swagger.io/terms/"
+  contact:
+    email: "arindam.sarkar2912@gmail.com"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "xmemes-arindam-sarkar.herokuapp.com"
+basePath: "/"
+tags:
+- name: "meme"
+  description: "Everything about Memes"
+schemes:
+- "https"
+- "http"
+paths:
+  /memes:
+    get:
+      tags:
+      - "meme"
+      summary: "Get all the memes"
+      description: ""
+      operationId: "memesGET"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        "200":
+          description: "Success"
+        "404":
+          description: "Not found"
+      x-swagger-router-controller: "Meme"
+    post:
+      tags:
+      - "meme"
+      summary: "Creates a new meme"
+      description: "Creates a new meme"
+      operationId: "memesPOST"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "meme"
+        description: "Creates a new meme"
+        required: false
+        schema:
+          $ref: "#/definitions/meme"
+      responses:
+        "201":
+          description: "Created"
+        "400":
+          description: "Bad request"
+        "422":
+          description: "All required fields not filled"
+      x-swagger-router-controller: "Meme"
+  /memes/{memeId}:
+    get:
+      tags:
+      - "meme"
+      summary: "Gets a meme with particular id"
+      description: "Gets a meme with particular id"
+      operationId: "memesMemeIdGET"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "memeId"
+        in: "path"
+        description: "String ID of the meme to get"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "Success"
+        "404":
+          description: "Not found"
+      x-swagger-router-controller: "Meme"
+    delete:
+      tags:
+      - "meme"
+      summary: "Deletes a meme with particular id"
+      description: "Deletes a meme with particular id"
+      operationId: "memesMemeIdDELETE"
+      parameters:
+      - name: "memeId"
+        in: "path"
+        description: "String ID of the meme to update"
+        required: true
+        type: "string"
+      responses:
+        "202":
+          description: "Accepted"
+        "404":
+          description: "Not found"
+      x-swagger-router-controller: "Meme"
+    patch:
+      tags:
+      - "meme"
+      summary: "Updates a meme with particular id"
+      description: "Updates a meme with particular id"
+      operationId: "memesMemeIdPATCH"
+      parameters:
+      - name: "memeId"
+        in: "path"
+        description: "String ID of the meme to update"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "meme"
+        description: "Updates an existing meme"
+        required: false
+        schema:
+          $ref: "#/definitions/meme_1"
+      responses:
+        "201":
+          description: "Created"
+        "400":
+          description: "Bad request"
+        "422":
+          description: "All required fields not filled"
+      x-swagger-router-controller: "Meme"
+definitions:
+  meme_1:
+    properties:
+      url:
+        type: "string"
+      caption:
+        type: "string"
+  meme:
+    properties:
+      name:
+        type: "string"
+      url:
+        type: "string"
+      caption:
+        type: "string"
