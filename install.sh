@@ -11,8 +11,6 @@ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongod
 #Reload the local package database.
 sudo apt update
 
-sudo apt-get update
-
 #Install the MongoDB packages.
 sudo apt install -y mongodb-org
 
@@ -31,7 +29,9 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 
 nvm install node
 
-sudo apt-get install npm
+sudo apt install npm
+
+npm install -g npm@7.5.4
 
 node -v
 
