@@ -1,0 +1,113 @@
+.App {
+    height: 100%;
+    background-color: black;
+}
+
+.header{
+    height: 30%;
+    background-color: rgb(27, 26, 26);
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.header-form{
+    background-color: transparent;
+}
+
+.header-form > input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid darkgray;
+    border-radius: 0;
+    padding: 0px 6px;
+    margin: 0px;
+    font-size: 15px;
+}
+
+.header-form > input:focus{
+    background-color: transparent;
+    color: white;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    border-bottom: 1px solid white;
+}
+
+.submit-btn{
+    display: flex;
+    justify-content: center;
+}
+
+.display{
+    height: 70%;
+    padding: 50px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container {
+    position: relative;
+    width: 50%;
+  }
+
+.card-image{
+    opacity: 1;
+    display: block;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    transition: .25s ease;
+}
+
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .container:hover .card-image {
+    cursor: pointer;
+    filter: brightness(30%);
+  }
+  
+  .container:hover .middle {
+    cursor: pointer;
+    opacity: 1;
+  }
+  
+  .text {
+    background-color: transparent;
+    color: white;
+    font-size: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
+
+.meme-card{
+    margin: 20px;
+}
+
+#update-meme { 
+    overflow: hidden; 
+    /* You should prefix the following: */
+    transition: max-height 500ms;
+}
+#update-meme.active {
+    /* Depending on this value, your animatiom will seem faster or shorter */
+    max-height: 1000px;
+}
+
+#toast-container{
+    top: 30px;
+    right: 20px;
+    left: auto !important;
+}
