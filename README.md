@@ -55,14 +55,14 @@ npm install
 npm start 
 ```   
 
-<!--##### Swagger Deployment Server-->
-<!--```-->
-<!--git clone https://gitlab.crio.do/COHORT_ME_BUILDOUT_XMEME_ENROLL_1612436694845/arindam-sarkar2912-me_buildout_xmeme.git    -->
-<!--cd arindam-sarkar2912-me_buildout_xmeme   -->
-<!--cd swagger-->
-<!--npm install-->
-<!--npm start -->
-<!--``` -->
+##### Swagger Deployment Server
+```
+git clone https://gitlab.crio.do/COHORT_ME_BUILDOUT_XMEME_ENROLL_1612436694845/arindam-sarkar2912-me_buildout_xmeme.git   
+cd arindam-sarkar2912-me_buildout_xmeme   
+cd swagger
+npm install
+npm start
+``` 
 
-<!-- ### Video Demo [here](https://www.dailymotion.com/video/x7x63hk) -->
+### Video Demo [here](https://youtu.be/o0J5sVQDmEg)
    
