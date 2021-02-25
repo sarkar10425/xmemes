@@ -42,14 +42,14 @@ Do leave a star :star: if you like this repo :blush:
 ##### NodeJS Development Server
 ```
 git clone https://gitlab.crio.do/COHORT_ME_BUILDOUT_XMEME_ENROLL_1612436694845/arindam-sarkar2912-me_buildout_xmeme.git    
-cd arindam-sarkar2912-me_buildout_xmeme 
+cd xmemes 
 npm install
 npm start
 ```  
 ##### ReactJS Deployment Server
 ```
 git clone https://gitlab.crio.do/COHORT_ME_BUILDOUT_XMEME_ENROLL_1612436694845/arindam-sarkar2912-me_buildout_xmeme.git    
-cd arindam-sarkar2912-me_buildout_xmeme   
+cd xmemes   
 cd client
 npm install
 npm start 
@@ -58,7 +58,7 @@ npm start
 ##### Swagger Deployment Server
 ```
 git clone https://gitlab.crio.do/COHORT_ME_BUILDOUT_XMEME_ENROLL_1612436694845/arindam-sarkar2912-me_buildout_xmeme.git   
-cd arindam-sarkar2912-me_buildout_xmeme   
+cd xmemes   
 cd swagger
 npm install
 npm start
